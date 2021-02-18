@@ -44,7 +44,7 @@ while play_again != "n":
 	if high_score == 0:
 		high_score = number_guesses
 		report_high_score(high_score)
-	# If it has been set check to see if it's better than the current score.
+	# If it has been set, check to see if it's better than the current score.
 	elif number_guesses < high_score:
 		high_score = number_guesses
 		report_high_score(high_score)
