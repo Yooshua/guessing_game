@@ -1,5 +1,5 @@
 import random
-# number_guesses = 0
+number_guesses = 0
 play_again = "y"
 high_score = 0
 
