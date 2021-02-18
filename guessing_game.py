@@ -29,24 +29,25 @@ def start_game(high_score):
 	print(f"You guessed {guessed_number}, which is correct! Congratulations!\n")
 	return number_guesses
 
+
+def report_high_score(high_score):
+	if high_score == 1: # Grammar Check: if it's one use 'guess' else guesses
+		print("You are aweseom! It only took you SINGLE guess. That's a new record!")
+	else:
+		print(f"You are aweseom! It only took you {high_score} guesses. That's a new record!")
+
+
 while play_again != "n":
 	number_guesses = start_game(high_score)
 	
 	# Check if high_score hasn't been set yet and set it for the first attempt.
 	if high_score == 0:
 		high_score = number_guesses
-		if high_score == 1: # Grammar Check: if it's one use 'guess' else guesses
-			print("You are aweseom! It only took you 1 guess. That's a new record!")
-		else:
-			print(f"You are aweseom! It only took you {high_score} guesses. That's a new record!")
-			
+		report_high_score(high_score)
 	# If it has been set check to see if it's better than the current score.
 	elif number_guesses < high_score:
 		high_score = number_guesses
-		if high_score == 1: # Grammar Check: if it's one use 'guess' else guesses
-			print("You are aweseom! It only took you SINGLE guess. That's a new record!")
-		else:
-			print(f"You are aweseom! It only took you {high_score} guesses. That's a new record!")
+		report_high_score(high_score)
 	else:
 		print(f"It took you {number_guesses} guesses. That's not a high score. Play again and try for the record!\n")
 	play_again = input("\nWould you like to play again? [y]es/[n]o ")
