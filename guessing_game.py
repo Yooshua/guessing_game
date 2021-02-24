@@ -29,7 +29,7 @@ def start_game(high_score):
 	print(f"You guessed {guessed_number}, which is correct! Congratulations!\n")
 	return number_guesses
 
-# Keep it DRY baby!
+# Keep it DRY!
 def report_high_score(high_score):
 	if high_score == 1: # Grammar Check: if it's one use 'guess' else guesses
 		print("You are aweseom! It only took you SINGLE guess. That's a new record!")
